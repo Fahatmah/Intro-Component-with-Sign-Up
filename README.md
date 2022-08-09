@@ -19,10 +19,13 @@ Users should be able to:
 
 -  Mobile View
    ![](/assets/mobile-view.jpeg)
+   
+### What I learned
+I learned javascript today. Everyday is video of tutorial but I am learning. Taking notes and thinking on how this kind of javascript code works.
 
 ### Links
 
--  Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-  Live Site URL: [Intro Component with Sign Up Form](https://intro-component-with-signup-form-frontend.netlify.app/)
 
 ### Built with
 
