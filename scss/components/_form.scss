@@ -71,16 +71,16 @@
 				width: 100%;
 				border: none;
 				outline: none;
-				padding: 1.1rem 2rem; 
+				padding: 1.1rem 2rem;
 				color: $dark_Blue;
 				font-size: 0.9rem;
 				font-weight: 700;
 				background-color: transparent;
 			}
 
-         input:focus {
-            border: 1px solid $blue;
-         }
+			input:focus {
+				border: 1px solid $blue;
+			}
 
 			.icon__error,
 			.icon__check {
@@ -101,24 +101,20 @@
 		}
 
 		button {
-			// width: 100%;
 			border: none;
 			outline: none;
 			padding: 1rem;
 			border-bottom: 3px solid hwb(154 18% 38%);
 			background-color: $green;
+			color: $white;
+			font-size: 0.98rem;
+			font-weight: 400;
+			letter-spacing: 1px;
+			text-transform: uppercase;
 			transition: 0.1s ease-in-out;
 
 			&:hover {
 				background-color: hsl(154, 85%, 60%);
-			}
-
-			h2 {
-				color: $white;
-				font-size: 0.98rem;
-				font-weight: 400;
-				letter-spacing: 1px;
-				text-transform: uppercase;
 			}
 		}
 
@@ -130,9 +126,9 @@
 			span {
 				color: $red;
 
-            &:hover {
-               text-decoration: underline;
-            }
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
