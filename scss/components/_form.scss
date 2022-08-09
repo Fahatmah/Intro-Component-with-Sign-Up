@@ -1,0 +1,139 @@
+@use '../abstracts/' as *;
+
+.form {
+	gap: 1.5rem;
+	width: 100%;
+	max-width: 35rem;
+
+	& > * {
+		border-radius: 10px;
+		width: 100%;
+		box-shadow: 0 8px 0 rgb(black, 0.18);
+	}
+
+	.form__header {
+		padding: 1rem;
+		background-color: $blue;
+		@include md {
+			@include flexContent(center, center, row);
+			gap: 0.3rem;
+		}
+
+		p {
+			line-height: 1.7;
+
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+
+	.data__form {
+		gap: 1.02rem;
+		width: 100%;
+		padding: 1.6rem;
+		background-color: $white;
+		@include md {
+			padding-block: 2.5rem;
+		}
+
+		& > *,
+		input {
+			width: min(100% - 0, 30rem);
+			border-radius: 6px;
+		}
+
+		.input__data {
+			position: relative;
+			border: 1px solid $grayish_Blue;
+
+			&.valid input {
+				border: 2px solid #3fe9a0;
+			}
+
+			&.invalid input {
+				border: 2px solid $red;
+			}
+
+			&.invalid .invalid__txt {
+				visibility: visible;
+			}
+
+			&.invalid .icon__error {
+				visibility: visible;
+			}
+
+			&.valid .icon__check {
+				visibility: visible;
+			}
+
+			input {
+				width: 100%;
+				border: none;
+				outline: none;
+				padding: 1.1rem 2rem; 
+				color: $dark_Blue;
+				font-size: 0.9rem;
+				font-weight: 700;
+				background-color: transparent;
+			}
+
+         input:focus {
+            border: 1px solid $blue;
+         }
+
+			.icon__error,
+			.icon__check {
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				visibility: hidden;
+			}
+
+			.invalid__txt {
+				position: absolute;
+				right: 0;
+				color: $red;
+				font-size: 0.7rem;
+				font-style: italic;
+				visibility: hidden;
+			}
+		}
+
+		button {
+			// width: 100%;
+			border: none;
+			outline: none;
+			padding: 1rem;
+			border-bottom: 3px solid hwb(154 18% 38%);
+			background-color: $green;
+			transition: 0.1s ease-in-out;
+
+			&:hover {
+				background-color: hsl(154, 85%, 60%);
+			}
+
+			h2 {
+				color: $white;
+				font-size: 0.98rem;
+				font-weight: 400;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+		}
+
+		p {
+			color: $grayish_Blue;
+			font-size: 0.78rem;
+			font-weight: 700;
+
+			span {
+				color: $red;
+
+            &:hover {
+               text-decoration: underline;
+            }
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+
+body {
+	color: $white;
+	font-size: 16px;
+	font-family: $poppins;
+	background-color: $red;
+	background-image: url(/assets/bg-intro-mobile.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-align: center;
+	@include md {
+		background-image: url(/assets/bg-intro-desktop.png);
+		background-size: cover;
+	}
+}
+body,
+main,
+header,
+.form,
+.data__form {
+	@include flexContent(center, center, column);
+}
+
+main {
+	width: min(100% - 3rem, 65rem);
+	margin-block: 2rem;
+	gap: 4rem;
+	@include md {
+		margin-block: 0;
+		flex-direction: row;
+	}
+}
